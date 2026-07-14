@@ -19,7 +19,13 @@ Begin with:
 
 Follow this sequence:
 
-**Understand → Question → Evidence → Decision → Design → Review → Deliver**
+**Understand → Question → Evidence → Decision → Design → Inspect artifact → Review → Revise or deliver**
+
+## Artifact compliance overrides prompt compliance
+
+A compliant prompt does not prove a compliant result. Treat every generated, rendered, or implemented artifact as untrusted until you inspect the actual output.
+
+Never claim that a design follows this skill merely because the brief, prompt, or implementation plan included the constraints. Compliance is determined only from the actual artifact.
 
 ## Read project knowledge by authority
 
@@ -44,6 +50,8 @@ Before creating, exploring, reviewing, or implementing a visual direction, extra
 - **BLOCKED**
 - **UNRESOLVED**
 
+Record every project-level **MUST**, **MUST NOT**, and **BLOCKED** constraint in a ledger with a unique ID, authority source, hard-gate status, and a method for verifying it in the actual artifact.
+
 Project-specific approved constraints override generic recommendations, examples, and valid-use exceptions in this skill.
 
 If an approved project foundation explicitly prohibits a layout, visual pattern, color behavior, interaction, content claim, asset type, or implementation method:
@@ -53,9 +61,9 @@ If an approved project foundation explicitly prohibits a layout, visual pattern,
 - do not use a generic exception in this skill to bypass the project decision;
 - mark any output containing it as **revise** before presentation.
 
-A project-level **MUST NOT** is a hard gate, not a preference.
+A project-level **MUST NOT** is a hard gate, not a preference. Read [references/execution-contract.md](references/execution-contract.md) before producing an artifact that must be generated, rendered, implemented, or verified.
 
-If two current authoritative sources conflict, report the conflict instead of choosing silently.
+If current authoritative sources conflict, record both rules. Apply an explicit project authority rule when one exists. Otherwise mark a consequential conflict **UNRESOLVED** and do not proceed past the affected irreversible decision without clarification. A reversible internal draft may continue only when the conflict is visible and cannot be mistaken for an approved result.
 
 ## Ten questions
 
@@ -123,6 +131,8 @@ Never invent features, behavior, dimensions, metrics, prices, customers, testimo
 
 When evidence is missing, omit it, state a reversible assumption, use an explicit placeholder such as `[NEEDED: verified metric]`, or mark a blocker. Never hide missing truth inside finished-looking work.
 
+Keep placeholders visibly provisional near the affected visual. Do not make them look product-specific or production-ready, claim they demonstrate real behavior, or rely on a page-level disclaimer instead of local labeling. State what evidence will replace them.
+
 ### 6. What am I assuming?
 
 Expose assumptions about:
@@ -181,6 +191,12 @@ Complete the requested website, design, review, or implementation before proposi
 
 Keep one version focused on one goal. Finish the current version before optimizing a future version. Improve through **complete → review → revise**, without redesigning unrelated parts each round.
 
+#### Choose the medium by verification needs
+
+Use image generation for visual direction, mood, composition studies, imagery concepts, and early internal references.
+
+When the task requires exact copy, deterministic typography, precise dimensions, responsive behavior, accessibility verification, interactive states, or production-ready layout, use a deterministic medium such as HTML/CSS, a coded prototype, or an editable design tool. Treat image-generated text and UI details as provisional.
+
 ### 10. Should I stop thinking?
 
 Stop when:
@@ -205,6 +221,21 @@ Before delivery, check:
 
 ## Review before delivery
 
+### Mandatory postflight
+
+After generating, rendering, or implementing a design:
+
+1. open or capture the actual artifact;
+2. inspect the complete artifact, not only a thumbnail or prompt;
+3. test every hard-gate constraint against the artifact;
+4. inspect the underlying composition without relying on color, imagery, branding, motion, labels, or decorative effects;
+5. mark every constraint **PASS**, **FAIL**, or **NOT VERIFIABLE**;
+6. never treat **NOT VERIFIABLE** as **PASS**.
+
+If a **MUST NOT**, **BLOCKED**, or hard **MUST** fails, mark the artifact **REVISE**. Do not call it compliant, approved, finished, or ready. Identify the smallest underlying cause, revise or regenerate the affected part, then inspect the new artifact again. Continue until it passes or reaches a genuine blocker.
+
+Do not let the user discover an obvious hard-gate violation that you could have detected by opening the artifact.
+
 Evaluate in this order:
 
 1. objective and audience task;
@@ -224,6 +255,21 @@ Apply these hard checks:
 - Has a previously rejected structure been reintroduced with different colors, effects, framing, or terminology?
 
 Mark any violation as **revise**, not **pass**.
+
+Use status language precisely:
+
+- **PROCESS USED** — the reasoning process was followed; this says nothing about artifact compliance;
+- **DIRECTIONAL DRAFT** — useful for discussion but not yet passed;
+- **COMPLIANT** — every hard gate passed against the actual artifact;
+- **NEEDS EVIDENCE** — compliance cannot be verified from the available artifact;
+- **REVISE** — one or more hard gates failed;
+- **BLOCKED** — required evidence, authority, assets, or approval is unavailable.
+
+A desktop-only artifact cannot prove responsiveness. A static artifact cannot prove accessibility, interaction, or implemented motion. Mark unsupported claims **NOT VERIFIABLE** or **NEEDS EVIDENCE**.
+
+Before delivery, report the artifact inspected, hard-gate result, failed or unverifiable constraints, artifact status, evidence dependencies, and the next revision when status is **REVISE**. Read [references/execution-contract.md](references/execution-contract.md) for the full inspection, revision, evidence, and delivery contract.
+
+For regression or forward-testing of this skill, read [references/evaluation-cases.md](references/evaluation-cases.md). Do not load evaluation cases during ordinary design work.
 
 ## Keep output proportional
 

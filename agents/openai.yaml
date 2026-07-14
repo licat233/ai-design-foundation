@@ -1,4 +1,4 @@
 interface:
   display_name: "AI Design Foundation"
-  short_description: "Guide distinctive, brand-specific website design"
-  default_prompt: "Use $ai-design-foundation to design or review a distinctive website grounded in the brand, audience, and real-world context."
+  short_description: "Design and verify brand-specific websites"
+  default_prompt: "Use $ai-design-foundation to design or review a distinctive website, inspect the actual artifact, and verify it against brand, audience, evidence, and project constraints."

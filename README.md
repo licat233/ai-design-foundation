@@ -157,19 +157,26 @@ ai-design-foundation/
 ├── SKILL.md
 ├── agents/
 │   └── openai.yaml
-└── references/
-    ├── anti-patterns.md
-    ├── brand-foundation.md
-    ├── exploration-and-decisions.md
-    └── review-checklist.md
+├── references/
+│   ├── anti-patterns.md
+│   ├── brand-foundation.md
+│   ├── evaluation-cases.md
+│   ├── execution-contract.md
+│   ├── exploration-and-decisions.md
+│   └── review-checklist.md
+└── tests/
+    └── 01-project-must-not-overrides-generic-exception.md
 ```
 
 - [`SKILL.md`](SKILL.md) contains the mandatory compact workflow.
 - [`references/brand-foundation.md`](references/brand-foundation.md) translates brand evidence and abstract adjectives into design behavior.
 - [`references/anti-patterns.md`](references/anti-patterns.md) checks conditional failure patterns without banning familiar components.
+- [`references/execution-contract.md`](references/execution-contract.md) governs artifact inspection, hard-gate revision, evidence limits, and delivery status.
+- [`references/evaluation-cases.md`](references/evaluation-cases.md) provides failure cases for forward-testing artifact compliance.
 - [`references/exploration-and-decisions.md`](references/exploration-and-decisions.md) governs limited exploration and decision records.
 - [`references/review-checklist.md`](references/review-checklist.md) provides the full review gate.
 - [`agents/openai.yaml`](agents/openai.yaml) provides optional Codex/ChatGPT UI metadata.
+- [`tests/01-project-must-not-overrides-generic-exception.md`](tests/01-project-must-not-overrides-generic-exception.md) preserves the first project-override regression case.
 
 The references use progressive disclosure: agents should load only the file needed for the current decision.
 

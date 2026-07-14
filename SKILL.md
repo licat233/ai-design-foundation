@@ -110,6 +110,14 @@ Show first and explain second when that order serves the audience. Do not turn t
 
 ### 8. Am I designing understanding or arranging content?
 
+#### Hierarchy before layout
+
+Before choosing a layout, determine whether the content items have equal communication priority.
+
+Do not default to equal columns because the number of items happens to match a common grid. If the items are equally important, an equal-column layout may be appropriate. If they are not equally important, make the visual hierarchy reflect the communication hierarchy.
+
+Let layout express meaning, not symmetry.
+
 Use these principles:
 
 - establish hierarchy before decoration;

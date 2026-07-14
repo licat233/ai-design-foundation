@@ -34,6 +34,29 @@ Prefer, in order:
 
 Use explicit approval status and relevance, not file date or confident wording. Report material conflicts. Never let a draft silently replace an approved decision.
 
+### Extract hard project constraints
+
+Before creating, exploring, reviewing, or implementing a visual direction, extract explicit project constraints into:
+
+- **MUST**
+- **MUST NOT**
+- **ALLOWED**
+- **BLOCKED**
+- **UNRESOLVED**
+
+Project-specific approved constraints override generic recommendations, examples, and valid-use exceptions in this skill.
+
+If an approved project foundation explicitly prohibits a layout, visual pattern, color behavior, interaction, content claim, asset type, or implementation method:
+
+- do not present it as a valid alternative;
+- do not reintroduce it through common convention;
+- do not use a generic exception in this skill to bypass the project decision;
+- mark any output containing it as **revise** before presentation.
+
+A project-level **MUST NOT** is a hard gate, not a preference.
+
+If two current authoritative sources conflict, report the conflict instead of choosing silently.
+
 ## Ten questions
 
 ### 1. What problem am I solving?
@@ -67,6 +90,19 @@ Do not reject it automatically. Do not accept it automatically.
 ### 4. Why is this my first answer?
 
 Ask whether it follows from the audience, offering, brand world, evidence, and constraints—or merely from a frequent AI pattern.
+
+#### Project override check
+
+Before accepting a familiar pattern, ask:
+
+- Has the approved project foundation explicitly rejected this pattern?
+- Is it listed in a project-specific anti-pattern, **MUST NOT** rule, acceptance criterion, or review decision?
+- Am I using a generic valid-use exception to reopen an already approved decision?
+- Would accepting this pattern make the result structurally similar to an option the project has already rejected?
+
+If yes, reject the pattern and explore a direction that complies with the approved project constraints.
+
+Do not repeatedly reopen confirmed design decisions during execution.
 
 Read [references/anti-patterns.md](references/anti-patterns.md) when the result feels generic, over-styled, interchangeable, or suspiciously familiar.
 
@@ -180,6 +216,14 @@ Evaluate in this order:
 7. responsive and implementation quality.
 
 Read [references/review-checklist.md](references/review-checklist.md) for a full review. Mark findings as **pass**, **needs evidence**, or **revise**. Tie every requested change to an objective, observation, or principle—not personal taste.
+
+Apply these hard checks:
+
+- Does the result violate any explicit project-level **MUST NOT** or **BLOCKED** constraint?
+- Does the underlying composition comply, or have forbidden patterns merely been disguised with decorative styling?
+- Has a previously rejected structure been reintroduced with different colors, effects, framing, or terminology?
+
+Mark any violation as **revise**, not **pass**.
 
 ## Keep output proportional
 

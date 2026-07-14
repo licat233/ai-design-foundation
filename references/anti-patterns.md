@@ -6,11 +6,13 @@ Use anti-patterns to diagnose unjustified defaults. Never ban a component merely
 
 **Signal:** Interchangeable headline, paragraph, primary button, and decorative image introduce the page without revealing specific value.
 
-**Failure condition:** The structure appears before the audience understands the offering, context, or evidence.
+**Failure condition:** The structure appears before the audience understands the offering, context, product behavior, or evidence.
 
-**Valid use:** A conventional hero is effective when the audience needs rapid orientation and the content is specific, credible, and well prioritized.
+**Valid use:** A conventional Hero may be effective when the audience needs rapid orientation, the content is specific and credible, and the project foundation has not explicitly rejected that structure.
 
-**Replace with:** Define the opening objective, then choose the simplest structure that achieves it.
+**Project override:** If an approved project foundation lists the conventional text-and-image Hero as a **MUST NOT** or rejected pattern, it is not a valid option for that project. Do not preserve the same underlying composition by adding cinematic framing, timecodes, overlays, unusual crops, gradients, motion, or other decoration.
+
+**Replace with:** Define the opening objective and identify the product behavior, transformation, evidence, or environmental moment that can carry the opening. Then select a composition that expresses that objective without returning to the rejected structure.
 
 ## Equal-card flattening
 
